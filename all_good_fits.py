@@ -170,7 +170,7 @@ for ii in range(len(ttg_single["gal_id"])):
 total_filt = how_many_good >= min_number_good_and_small
 print(np.count_nonzero(total_filt==True)) #to see how many galaxies in total
 
-#rejecting objects that are not massive enough
+#rejecting objects that are not massive enough according to the new masses
 mass = 10.**(tt_mass["logmstar_Ferreras"])
 total_filt_mass = mass > 8e10
 total_filt = np.logical_and(total_filt,total_filt_mass)
